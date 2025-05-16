@@ -12,7 +12,9 @@ df = pd.read_excel(input_file)
 
 table = input("What is the name of the table in the database?\n")
 
-with open(output_file, "w", encoding="utf-8") as f:
+encoding = input("Enter the encoding type (default is 'utf-8'):\n") or "utf-8"
+
+with open(output_file, "w", encoding=encoding) as f:
     columns = ", ".join([f"`{col}`" for col in df.columns])
     values = []
     for _, row in df.iterrows():
@@ -21,4 +23,4 @@ with open(output_file, "w", encoding="utf-8") as f:
     values_str = ",\n".join(values)
     f.write(f"INSERT INTO {table} ({columns}) VALUES\n{values_str};\n")
 
-print(f"SQL dump written to {output_file}")
+print(f"SQL dump written to {output_file} with encoding {encoding}")
