@@ -1,0 +1,5 @@
+*.xlsx
+*.xlsm
+.qodo
+.DS_Store
+*.txt
