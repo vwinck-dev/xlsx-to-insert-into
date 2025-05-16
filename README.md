@@ -1,4 +1,4 @@
-# XLSX to MySQL Dump Converter
+# XLSX to INSERT INTO Query Converter
 
 This project is a Python-based tool designed to convert data from an Excel file (`.xlsx`) into a MySQL dump file. The generated dump file can be used to populate a MySQL database with the data from the Excel spreadsheet.
 
